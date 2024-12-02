@@ -5,7 +5,19 @@ edition = "2021"
 
 [dependencies]
 solana-client = "2.1.2"      # Solana RPC Client
-clap = "4.0"              # For CLI argument parsing
+clap = { version = "4.5.2", features = ["derive"] }      # For CLI argument parsing
 tokio = { version = "1.0", features = ["full"] } # Async support
 serde = { version = "1.0", features = ["derive"] } # JSON parsing
-serde_json = "1.0"
+serde_json = "1.0.133"
+solana-sdk = "2.1.4"
+reqwest = { version = "0.12.9", features = ["json"] }
+# Error handling
+anyhow = "1.0.80"
+thiserror = "1.0.57"
+# Logging
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+
+config="0.13.4"
+dirs ="5.0.1"
+toml = "0.8.19" 
